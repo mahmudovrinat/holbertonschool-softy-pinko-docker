@@ -1,11 +1,8 @@
-# Base image olaraq Ubuntu istifadə edirik
+# 1. Son Ubuntu versiyası əsasında image yaradılır
 FROM ubuntu:latest
 
-# TTY ilə bağlı bəzi problemlərin qarşısını almaq üçün bu dəyişəni əlavə edirik
-ENV DEBIAN_FRONTEND=noninteractive
-
-# Sistemi yenilə
+# 2. Sistemin yenilənməsi
 RUN apt-get update && apt-get upgrade -y
 
-# "Hello, World!" çap etmək üçün default command
+# 3. Kontainer işə düşəndə “Hello, World!” mesajı verəcək
 CMD echo "Hello, World!"
