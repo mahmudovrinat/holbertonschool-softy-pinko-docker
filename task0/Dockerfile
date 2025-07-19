@@ -1,8 +1,8 @@
-# 1. Son Ubuntu versiyası əsasında image yaradılır
+# Use the latest Ubuntu base image
 FROM ubuntu:latest
 
-# 2. Sistemin yenilənməsi
+# Update and upgrade APT packages
 RUN apt-get update && apt-get upgrade -y
 
-# 3. Kontainer işə düşəndə “Hello, World!” mesajı verəcək
-CMD echo "Hello, World!"
+# Print "Hello, World!" when the container starts
+CMD ["echo", "Hello, World!"]
